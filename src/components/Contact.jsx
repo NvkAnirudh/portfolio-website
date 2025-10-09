@@ -77,19 +77,19 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:[your-email]@example.com',
+      href: 'mailto:nvkanirudh124@gmail.com',
       display: '[your-email]@example.com',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/[your-username]',
+      href: 'https://github.com/NvkAnirudh',
       display: 'github.com/[your-username]',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/[your-profile]',
+      href: 'https://linkedin.com/in/nvkanirudh',
       display: 'linkedin.com/in/[your-profile]',
     },
   ];
