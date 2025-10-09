@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-100 font-mono;
+    background-image:
+      linear-gradient(90deg, rgba(6, 182, 212, 0.02) 1px, transparent 1px),
+      linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0;
+    background-repeat: repeat, repeat;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .snowflake {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(6, 182, 212, 0.4) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(6, 182, 212, 0.5);
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+
+  /* Halloween Animations */
+  @keyframes flyAcross {
+    0% {
+      transform: translateX(-100px) scaleX(1);
+    }
+    48% {
+      transform: translateX(calc(50vw - 50px)) scaleX(1);
+    }
+    52% {
+      transform: translateX(calc(50vw + 50px)) scaleX(-1);
+    }
+    100% {
+      transform: translateX(calc(100vw + 100px)) scaleX(-1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(5deg);
+    }
+  }
+
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-40px);
+    }
+  }
+
+  .ghost-eye {
+    animation: blink 4s infinite;
+  }
+
+  @keyframes blink {
+    0%, 96%, 100% {
+      opacity: 1;
+    }
+    98% {
+      opacity: 0;
+    }
+  }
+
+  .bat {
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3));
+  }
+
+  .bat:hover {
+    animation-play-state: paused !important;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0891b2;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #06b6d4 #1f2937;
+  }
+}
