@@ -8,6 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Snowflakes from './components/Snowflakes';
 import HalloweenElements from './components/HalloweenElements';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Skills />
         <Contact />
       </div>
+      <Chatbot />
       <Analytics />
     </div>
   );
