@@ -72,42 +72,66 @@ const HalloweenElements = () => {
             <svg width="60" height="80" viewBox="0 0 60 80" fill="none" style={{ pointerEvents: 'none' }}>
               <path
                 d="M30 10 Q10 10 10 35 L10 70 Q10 75 15 75 Q15 70 20 70 Q20 75 25 75 Q25 70 30 70 Q30 75 35 75 Q35 70 40 70 Q40 75 45 75 Q50 75 50 70 L50 35 Q50 10 30 10 Z"
-                fill="rgba(6, 182, 212, 0.15)"
-                stroke="rgba(6, 182, 212, 0.4)"
+                fill="rgba(6, 182, 212, 0.08)"
+                stroke="rgba(6, 182, 212, 0.2)"
                 strokeWidth="1"
               />
               {/* Eyes */}
-              <circle cx="20" cy="30" r="4" fill="rgba(6, 182, 212, 0.6)" className="ghost-eye" />
-              <circle cx="40" cy="30" r="4" fill="rgba(6, 182, 212, 0.6)" className="ghost-eye" />
+              <circle cx="20" cy="30" r="4" fill="rgba(6, 182, 212, 0.3)" className="ghost-eye" />
+              <circle cx="40" cy="30" r="4" fill="rgba(6, 182, 212, 0.3)" className="ghost-eye" />
               {/* Mouth */}
-              <path d="M25 45 Q30 50 35 45" stroke="rgba(6, 182, 212, 0.6)" strokeWidth="2" fill="none" />
+              <path d="M25 45 Q30 50 35 45" stroke="rgba(6, 182, 212, 0.3)" strokeWidth="2" fill="none" />
             </svg>
           </div>
         ))}
       </div>
 
-      {/* Spooky Spiderwebs in corners */}
-      <div className="fixed top-0 left-0 pointer-events-none z-50 opacity-30">
-        <svg width="200" height="200" viewBox="0 0 200 200">
+      {/* Realistic Spiderwebs in corners */}
+      <div className="fixed top-0 left-0 pointer-events-none z-50 opacity-20">
+        <svg width="250" height="250" viewBox="0 0 250 250">
+          {/* Radial threads from corner */}
           <path
-            d="M0 0 L100 100 M0 20 L90 100 M0 40 L80 100 M20 0 L100 90 M40 0 L100 80"
-            stroke="rgba(6, 182, 212, 0.3)"
-            strokeWidth="1"
+            d="M0 0 L120 120 M0 0 L140 60 M0 0 L160 30 M0 0 L180 10 M0 0 L60 140 M0 0 L30 160 M0 0 L10 180"
+            stroke="rgba(200, 200, 200, 0.4)"
+            strokeWidth="0.8"
             fill="none"
           />
-          <circle cx="100" cy="100" r="3" fill="rgba(6, 182, 212, 0.5)" />
+          {/* Concentric circular threads */}
+          <path
+            d="M30 30 Q40 10 60 15 M30 30 Q10 40 15 60
+               M60 60 Q80 30 100 40 M60 60 Q30 80 40 100
+               M90 90 Q120 50 150 70 M90 90 Q50 120 70 150"
+            stroke="rgba(200, 200, 200, 0.3)"
+            strokeWidth="0.6"
+            fill="none"
+          />
+          {/* Spider body at center */}
+          <circle cx="120" cy="120" r="4" fill="rgba(100, 100, 100, 0.6)" />
+          <ellipse cx="118" cy="115" rx="3" ry="4" fill="rgba(80, 80, 80, 0.5)" />
         </svg>
       </div>
 
-      <div className="fixed top-0 right-0 pointer-events-none z-50 opacity-30 transform scale-x-[-1]">
-        <svg width="200" height="200" viewBox="0 0 200 200">
+      <div className="fixed top-0 right-0 pointer-events-none z-50 opacity-20 transform scale-x-[-1]">
+        <svg width="250" height="250" viewBox="0 0 250 250">
+          {/* Radial threads from corner */}
           <path
-            d="M0 0 L100 100 M0 20 L90 100 M0 40 L80 100 M20 0 L100 90 M40 0 L100 80"
-            stroke="rgba(6, 182, 212, 0.3)"
-            strokeWidth="1"
+            d="M0 0 L120 120 M0 0 L140 60 M0 0 L160 30 M0 0 L180 10 M0 0 L60 140 M0 0 L30 160 M0 0 L10 180"
+            stroke="rgba(200, 200, 200, 0.4)"
+            strokeWidth="0.8"
             fill="none"
           />
-          <circle cx="100" cy="100" r="3" fill="rgba(6, 182, 212, 0.5)" />
+          {/* Concentric circular threads */}
+          <path
+            d="M30 30 Q40 10 60 15 M30 30 Q10 40 15 60
+               M60 60 Q80 30 100 40 M60 60 Q30 80 40 100
+               M90 90 Q120 50 150 70 M90 90 Q50 120 70 150"
+            stroke="rgba(200, 200, 200, 0.3)"
+            strokeWidth="0.6"
+            fill="none"
+          />
+          {/* Spider body at center */}
+          <circle cx="120" cy="120" r="4" fill="rgba(100, 100, 100, 0.6)" />
+          <ellipse cx="118" cy="115" rx="3" ry="4" fill="rgba(80, 80, 80, 0.5)" />
         </svg>
       </div>
     </>

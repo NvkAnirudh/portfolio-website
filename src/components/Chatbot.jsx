@@ -189,6 +189,13 @@ const Chatbot = () => {
       {!hasStartedChat ? (
         // Landing Screen - Elegant Gradient Style
         <div className="relative h-screen flex flex-col items-center justify-center px-4">
+          {/* Happy Halloween Message */}
+          {/* <div className="absolute top-8 left-1/2 -translate-x-1/2 animate-fadeIn">
+            <p className="text-cyan-400 text-base md:text-lg drop-shadow-lg">
+              🎃 Happy Halloween 🎃
+            </p>
+          </div> */}
+
           {/* Anirudh Logo */}
           <div className="mb-8 animate-fadeIn">
             <div className="text-5xl font-bold text-cyan-400 drop-shadow-2xl">
