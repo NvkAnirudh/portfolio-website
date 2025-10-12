@@ -152,6 +152,30 @@ const Chatbot = () => {
     }
   };
 
+  // Function to convert URLs to clickable links
+  const renderMessageWithLinks = (text) => {
+    // Regex to match URLs (http/https)
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 hover:text-cyan-200 underline transition-colors"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div className="relative min-h-screen z-50 overflow-hidden">
       {/* Gradient Background */}
@@ -252,7 +276,9 @@ const Chatbot = () => {
                         : 'bg-gray-900 text-gray-100 border border-gray-800'
                     }`}
                   >
-                    <p className="text-base leading-relaxed whitespace-pre-wrap">{message.text}</p>
+                    <p className="text-base leading-relaxed whitespace-pre-wrap">
+                      {renderMessageWithLinks(message.text)}
+                    </p>
                   </div>
                 </div>
               ))}
