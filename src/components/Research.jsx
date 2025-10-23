@@ -42,7 +42,7 @@ const Research = () => {
       <div className="max-w-5xl mx-auto">
         <div className="animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-accent">
-            Research Papers Walkthroughs
+            Research Paper Walkthroughs
           </h2>
         </div>
 

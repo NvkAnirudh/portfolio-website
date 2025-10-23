@@ -377,7 +377,7 @@ const ResearchArticle = () => {
 
             {/* FAQ Section */}
             <div className="mt-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6">Follow-ups</h2>
 
               <div className="space-y-4">
                 {/* FAQ Item */}
