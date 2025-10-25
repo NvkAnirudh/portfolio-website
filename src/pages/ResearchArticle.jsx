@@ -9,6 +9,7 @@ const ResearchArticle = () => {
 
   const paperTitles = {
     'agentic-context-engineering': 'Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models',
+    'dragon-hatchling': 'The Dragon Hatchling: The Missing Link Between The Transformer And Models Of The Brain',
   };
 
   const title = paperTitles[paperId] || 'Research Paper';
@@ -32,46 +33,90 @@ const ResearchArticle = () => {
           </h1>
 
           {/* Paper Reference */}
-          <p className="text-gray-400 italic mb-6">
-            Based on the research paper:{' '}
-            <a
-              href="https://arxiv.org/pdf/2510.04618"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:text-cyan-300 underline transition-colors"
-            >
-              Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models
-            </a>
-            {' '}by researchers at Stanford University, SambaNova Systems, and UC Berkeley (October 2025)
-          </p>
+          {paperId === 'agentic-context-engineering' && (
+            <p className="text-gray-400 italic mb-6">
+              Based on the research paper:{' '}
+              <a
+                href="https://arxiv.org/pdf/2510.04618"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-cyan-300 underline transition-colors"
+              >
+                Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models
+              </a>
+              {' '}by researchers at Stanford University, SambaNova Systems, and UC Berkeley (October 2025)
+            </p>
+          )}
+          {paperId === 'dragon-hatchling' && (
+            <p className="text-gray-400 italic mb-6">
+              Based on the research paper:{' '}
+              <a
+                href="https://arxiv.org/pdf/2509.26507"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-cyan-300 underline transition-colors"
+              >
+                The Dragon Hatchling: Bridging AI and the Human Brain
+              </a>
+            </p>
+          )}
 
           {/* Tags */}
-          <div className="mb-12">
-            <p className="text-gray-400 mb-3">Tags:</p>
-            <div className="flex flex-wrap gap-2">
-              {[
-                'Artificial Intelligence',
-                'Machine Learning',
-                'Large Language Models',
-                'Context Engineering',
-                'AI Agents',
-                'Self Improving AI',
-                'NLP',
-                'Deep Learning'
-              ].map((tag, index) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1.5 bg-gray-800/40 border border-gray-700 text-accent text-sm rounded-md hover:border-accent hover:bg-gray-800/60 transition-all duration-200 animate-fadeIn"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {tag}
-                </span>
-              ))}
+          {paperId === 'agentic-context-engineering' && (
+            <div className="mb-12">
+              <p className="text-gray-400 mb-3">Tags:</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Artificial Intelligence',
+                  'Machine Learning',
+                  'Large Language Models',
+                  'Context Engineering',
+                  'AI Agents',
+                  'Self Improving AI',
+                  'NLP',
+                  'Deep Learning'
+                ].map((tag, index) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1.5 bg-gray-800/40 border border-gray-700 text-accent text-sm rounded-md hover:border-accent hover:bg-gray-800/60 transition-all duration-200 animate-fadeIn"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {paperId === 'dragon-hatchling' && (
+            <div className="mb-12">
+              <p className="text-gray-400 mb-3">Tags:</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Artificial Intelligence',
+                  'Neuroscience',
+                  'Transformers',
+                  'Brain Models',
+                  'Hebbian Learning',
+                  'Linear Attention',
+                  'Interpretability',
+                  'Deep Learning'
+                ].map((tag, index) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1.5 bg-gray-800/40 border border-gray-700 text-accent text-sm rounded-md hover:border-accent hover:bg-gray-800/60 transition-all duration-200 animate-fadeIn"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Article Content */}
-          <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed">
+          {paperId === 'agentic-context-engineering' && (
+            <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed">
             <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Introduction</h2>
             <p className="mb-4">
               Imagine teaching someone a complex skill. You could rewire their brain each time they need to learn something new, or you could give them a living notebook that grows smarter with every experience. The second approach is exactly what researchers from Stanford University, SambaNova Systems, and UC Berkeley have achieved with their groundbreaking framework called Agentic Context Engineering (ACE).
@@ -511,6 +556,233 @@ const ResearchArticle = () => {
               </div>
             </div>
           </div>
+          )}
+
+          {/* Dragon Hatchling Content */}
+          {paperId === 'dragon-hatchling' && (
+            <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Where Memory Lives: The Fundamental Problem</h2>
+              <p className="mb-4">
+                For decades, scientists have wrestled with a puzzle: AI systems like ChatGPT are powerful, but they work completely differently than the brain. The critical difference isn't performance but something more fundamental: where and how memory is stored.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">In your brain:</h3>
+              <p className="mb-4">
+                Memory lives on specific connections (synapses) between specific neurons. When you learn "Jake loves pizza," the synapse connecting the "Jake" neuron and "pizza preference" neuron strengthens through Hebbian learning (Hebb, 1949): "neurons that fire together, wire together."
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">In Transformers (GPT-2):</h3>
+              <p className="mb-4">
+                Memory lives in a centralized "KV-cache" (Vaswani et al., 2017). When the model processes "Jake loves pizza," this information enters the cache, but you cannot point to where the Jake-pizza connection is stored. Memory is diffuse across dense tensors with no spatial meaning.
+              </p>
+
+              <p className="mb-6">
+                This has profound implications: we can't explain how the brain does language at the neuron level, can't interpret what AI has learned, and can't ensure AI generalizes like humans.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Enter the Dragon Hatchling</h2>
+              <p className="mb-4">
+                Researchers from Pathway created BDH (Brain Dragon Hatchling), achieving something unprecedented: memory stored on graph edges like brain synapses, while matching Transformer performance (Kosowski et al., 2025).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">Three fundamental innovations:</h3>
+
+              <h4 className="text-lg md:text-xl font-semibold text-gray-200 mb-3 mt-4">1. State Localization on Graph Edges</h4>
+              <p className="mb-4">
+                Memory lives at position [i,j] in the state matrix, representing the synapse between neurons i and j. The researchers found "monosemantic synapses" that consistently activate for specific concepts like currencies or countries (Kosowski et al., 2025, Section 6.3).
+              </p>
+
+              <h4 className="text-lg md:text-xl font-semibold text-gray-200 mb-3 mt-4">2. Linear Attention in Extreme High Dimension</h4>
+              <p className="mb-4">
+                Instead of softmax (exponential function) in d=512 dimensions, BDH uses simple dot products in n=32,768 dimensions. Key insight: any similarity function can be approximated by linear operations in sufficiently high dimension (Kosowski et al., 2025, Section 6.1). More biologically plausible since neurons don't compute exponentials.
+              </p>
+
+              <h4 className="text-lg md:text-xl font-semibold text-gray-200 mb-3 mt-4">3. Dual Interpretation</h4>
+              <p className="mb-6">
+                BDH-GPU implements as standard PyTorch tensors (GPU trainable). But the same model describes as local graph dynamics with Hebbian learning. These are mathematically equivalent (Kosowski et al., 2025). No other architecture achieves this duality.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">How Does BDH Work? Understanding State Localization</h2>
+              <p className="mb-4">
+                Let's break this down with a concrete example of what makes BDH different.
+              </p>
+              <p className="mb-4">
+                Imagine you're processing the sentence: "The dollar has appreciated with respect to the euro."
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">In a standard Transformer:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>The model processes each token and computes attention</li>
+                <li>Key-value pairs go into the KV-cache: a centralized data structure</li>
+                <li>The information "dollar, euro, currency, appreciation" is now somewhere in this cache</li>
+                <li>But WHERE? You can't point to it. The memory is diffuse across the entire tensor</li>
+                <li>Later, if you ask about currency, the model queries this cache with softmax attention</li>
+              </ul>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">In BDH:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>The model processes "dollar" and neuron #4,283 activates (positive sparse activation)</li>
+                <li>It processes "euro" and neuron #7,891 activates</li>
+                <li>These neurons are connected through the state matrix ρ</li>
+                <li>The synapse at position σ[4283, 7891] strengthens using a Hebbian learning rule: when neuron i and neuron j fire together, their connection strengthens</li>
+                <li>A "currency concept" neuron (#1,592) also activates</li>
+                <li>Synapses connecting these neurons form a subgraph encoding "currency relationships"</li>
+                <li>You can visualize this exact subgraph and watch it form in real-time</li>
+              </ul>
+
+              <p className="mb-4">
+                According to the paper, "We confirm empirically that specific, individual synapses strengthen connection whenever BDH hears or reasons about a specific concept while processing language inputs" (Kosowski et al., 2025, Abstract).
+              </p>
+
+              <p className="mb-6">
+                The key architectural difference: In BDH, memory is not separate from the graph. The graph IS the memory. The state during inference is represented by edge weights on the neuron-to-neuron connection graph, exactly like biological synaptic plasticity.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">The Architecture: Two Equivalent Forms</h2>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">BDH (Pure Graph Model):</h3>
+              <p className="mb-4">
+                Describes the system as n neurons with excitatory and inhibitory circuits, integrate-and-fire thresholding, and Hebbian learning: σ(t+1) = σ(t) + y(i)·x(j) when neurons fire together (Kosowski et al., 2025, Section 2.2).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">BDH-GPU (Tensor Implementation):</h3>
+              <p className="mb-6">
+                Only 3 parameter matrices (E, Dx, Dy) totaling (3+ε)nd parameters. Uses linear attention with state update:<br/>
+                ρ(t) = ρ(t-1) + LN(Ey(t-1))x(t)^T<br/>
+                Trainable with standard backpropagation, then the underlying graph structure can be extracted for analysis (Kosowski et al., 2025, Equation 8).
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Key Biological Mechanisms</h2>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">1. Sparse, Positive Activations</h3>
+              <p className="mb-4">
+                Only ~5% of neurons active at any moment, matching brain behavior. "The activation pattern of xt rapidly becomes sparse (only ρ ≈ 5% of entries are non-zero)" without explicit regularization (Kosowski et al., 2025, Section 4.1).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">2. Monosemantic Synapses</h3>
+              <p className="mb-4">
+                Specific synapses respond to specific concepts. The researchers identified synapses that activate for "currencies" or "countries" across both English and French contexts (Kosowski et al., 2025, Section 6.3).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">3. Scale-Free Network Structure</h3>
+              <p className="mb-4">
+                Power-law degree distributions and high modularity emerged naturally during training. Random baseline networks showed modularity dropping to zero, proving this is learned structure (Kosowski et al., 2025, Section 5.5).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">4. Oscillatory Dynamics</h3>
+              <p className="mb-6">
+                Neurons indexed by RoPE frequency create a temporal hierarchy. Slow-acting neurons maintain longer context while fast neurons respond to immediate patterns (Kosowski et al., 2025, Figure 14).
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Performance Results</h2>
+              <p className="mb-4">
+                BDH-GPU matches GPT-2 from 10M to 1B parameters on translation tasks. At 1B parameters, both achieve ~0.36 validation loss. The paper demonstrates BDH follows the same scaling laws and "learns faster per data token" (Kosowski et al., 2025, Section 4.2).
+              </p>
+              <p className="mb-6">
+                This proves brain-like architectures aren't a performance compromise. Linear attention in high dimension (n=32,768) matches softmax in low dimension (d=512). Memory on graph edges performs as well as centralized KV-cache.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Why This Matters</h2>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">For Neuroscience:</h3>
+              <p className="mb-4">
+                First computational model that performs language at scale using biological mechanisms (Hebbian learning, spiking neurons). Makes testable predictions about synaptic strengthening patterns, scale-free connectivity, and sparse activation that can be verified experimentally.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">For AI Engineering:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>Interpretability: State localized at neuron pairs enables micro-interpretation (Kosowski et al., 2025, Section 8.1)</li>
+                <li>Uniform scaling: Grows in one dimension (n), simplifying hyperparameter search</li>
+                <li>No context limit: State size fixed at n×d regardless of sequence length</li>
+                <li>Neuromorphic ready: Natural fit for brain-inspired hardware</li>
+              </ul>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">For Theory:</h3>
+              <p className="mb-6">
+                Proves formal equivalence between Transformer attention and local graph dynamics through complexity reductions. Suggests intelligence emerges from simple local rules, not mysterious special mechanisms.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Limitations</h2>
+              <ul className="list-disc list-inside mb-6 space-y-2 ml-4">
+                <li><strong className="text-accent">Scale:</strong> Tested only to 1B parameters. Unknown if benefits persist at 100B+ scale.</li>
+                <li><strong className="text-accent">Long-term memory:</strong> Explains reasoning at minutes timescale (hundreds of tokens) but not memory consolidation to permanent storage.</li>
+                <li><strong className="text-accent">Biological verification:</strong> Makes testable predictions but direct neural recording evidence not yet available.</li>
+                <li><strong className="text-accent">Task diversity:</strong> Tested primarily on language modeling and translation, not multi-modal or long-context tasks.</li>
+              </ul>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Future Directions</h2>
+              <ul className="list-disc list-inside mb-6 space-y-2 ml-4">
+                <li>Scale to 10B+ parameters to test if emergent properties persist</li>
+                <li>Neuroscience collaboration to test predictions about synaptic patterns and scale-free structure</li>
+                <li>Multi-modal extensions to vision and audio using same principles</li>
+                <li>Neuromorphic implementation on chips like Intel Loihi for energy-efficient inference</li>
+                <li>Lifelong learning with memory consolidation mechanisms</li>
+                <li>Theoretical work on sample complexity bounds and emergent structure characterization</li>
+              </ul>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Conclusion</h2>
+              <p className="mb-4">
+                BDH achieves three things simultaneously: matches GPT-2 performance (10M to 1B parameters), uses biologically plausible mechanisms, and proves formal equivalence between the two (Kosowski et al., 2025).
+              </p>
+              <p className="mb-4">
+                The key innovation: Memory localized on graph edges instead of centralized cache, with linear attention in high dimension matching softmax attention in low dimension.
+              </p>
+              <p className="mb-4">
+                The theoretical contribution: Transformer attention and biological synaptic plasticity are mathematically equivalent, connected through formal complexity reductions. As the authors state, these mechanisms "formally converge as closed-form local graph dynamics at neurons and synapses: the equations of reasoning" (Kosowski et al., 2025, Abstract).
+              </p>
+              <p className="mb-4">
+                The implications: Intelligence might emerge from simple local rules (Hebbian learning, sparse coding, scale-free structure) rather than mysterious special mechanisms. BDH doesn't prove the brain works this way, but provides the strongest evidence yet that AI and biological intelligence might be two implementations of the same algorithms.
+              </p>
+              <p className="mb-4">
+                The name "Dragon Hatchling" fits: this model is young, tested only to 1B parameters, with long-term memory and multi-modal extensions still to come. But it changes the question from "Can we build AI like the brain?" to "Can we prove AI already works like the brain?"
+              </p>
+              <p className="mb-6">
+                For that question, BDH offers a compelling answer: Yes, at least in principle.
+              </p>
+              <hr className="border-gray-700 my-8" />
+
+              <h2 className="text-2xl md:text-3xl font-bold text-accent mb-6 mt-8">Key Takeaways</h2>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">Architectural Innovation:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>Memory on graph edges (synapses) not separate KV-cache</li>
+                <li>Linear attention in n=32,768 dimensions vs softmax in d=512</li>
+                <li>Only 3 parameter matrices totaling (3+ε)nd parameters</li>
+                <li>Dual interpretation: tensor ops AND biological graph dynamics</li>
+              </ul>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">Biological Mechanisms:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>Hebbian learning with 5% sparse positive activations</li>
+                <li>Monosemantic synapses track specific concepts</li>
+                <li>Scale-free networks emerge naturally with power-law degrees</li>
+                <li>Oscillatory dynamics for multi-scale temporal processing</li>
+              </ul>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">Results:</h3>
+              <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                <li>Matches GPT-2 from 10M to 1B parameters</li>
+                <li>Same scaling laws, learns faster per token</li>
+                <li>High modularity and emergent structure confirmed</li>
+              </ul>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-cyan-300 mb-4 mt-6">Theory:</h3>
+              <ul className="list-disc list-inside mb-6 space-y-2 ml-4">
+                <li>Proves Transformer attention ≡ local graph dynamics</li>
+                <li>Establishes formal link between AI and neuroscience</li>
+                <li>Suggests intelligence from simple rules at scale</li>
+              </ul>
+            </div>
+          )}
         </article>
       </div>
     </div>

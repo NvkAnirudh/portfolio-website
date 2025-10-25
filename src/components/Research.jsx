@@ -31,6 +31,10 @@ const Research = () => {
       id: 'agentic-context-engineering',
       title: 'Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models',
     },
+    {
+      id: 'dragon-hatchling',
+      title: 'The Dragon Hatchling: The Missing Link Between The Transformer And Models Of The Brain',
+    },
   ];
 
   const handlePaperClick = (paperId) => {
