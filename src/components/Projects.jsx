@@ -28,7 +28,113 @@ const Projects = () => {
 
   const projects = [
     {
+      name: 'YC Extractor and Job Application Tracker',
+      date: 'Nov 2025',
+      description:
+        'An automated job application tracker that scrapes Y Combinator\'s "Work at a Startup" company pages, extracts job postings, and generates personalized application messages using Claude AI.',
+      tech: ['Python', 'Selenium', 'Claude AI', 'Google Sheets API'],
+      github: 'https://github.com/NvkAnirudh/yc_extractor_and_tracker',
+      demo: null,
+      details: {
+        features: [
+          'Company Page Scraping: Automatically scrapes YC company pages using Selenium',
+          'Founder Information: Extracts founder names and LinkedIn profiles',
+          'Job Listings: Displays all available positions with interactive selection',
+          'AI-Powered Messages: Generates personalized 500-character application messages using Claude',
+          'Google Sheets Integration: Automatically saves all data to Google Sheets',
+          'Continuous Processing: Process multiple companies in one session',
+          'Duplicate Detection: Prevents duplicate job entries'
+        ],
+        example: `$ python claude_job_extractor.py
+
+================================================================================
+JOB APPLICATION TRACKER V2
+================================================================================
+
+Enter the company page URL (or 'quit' to exit):
+Example: https://www.workatastartup.com/companies/reform
+
+URL: https://www.workatastartup.com/companies/reform
+
+📥 Fetching company page: https://www.workatastartup.com/companies/reform
+
+⏳ Extracting company information... ✓
+   Company: Reform
+   Founders: Omar Abuhashish, Pradhit Gosula
+
+⏳ Extracting available positions... ✓ (5 positions found)
+
+================================================================================
+AVAILABLE POSITIONS AT REFORM
+================================================================================
+
+1. Technical Recruiter
+2. Product Manager
+3. Senior Software Engineer
+4. Forward Deployed Engineer
+5. Enterprise Account Executive
+
+6. Cancel
+
+Select a position (1-6): 3
+
+✓ Selected: Senior Software Engineer
+
+⏳ Extracting job details... ✓
+⏳ Generating personalized message... ✓
+⏳ Updating Google Sheets... ✓
+
+================================================================================
+PERSONALIZED APPLICATION MESSAGE
+================================================================================
+
+Hi Omar Abuhashish,
+
+[Your personalized message here]
+
+================================================================================
+✓ Message saved to Google Sheets!
+📊 Character count: 455/500
+================================================================================
+
+Process another company? (y/n):`
+      }
+    },
+    {
+      name: 'DEtermined Data Engineering Platform',
+      date: 'Apr 2025',
+      description:
+        'Engineered end-to-end distributed data pipelines using PySpark, SQL, and Delta Lake achieving 5x performance improvement. ML-enhanced content platform with 200+ subscribers and 30K+ monthly impressions.',
+      tech: ['PySpark', 'Delta Lake', 'SQL', 'LangChain', 'OpenAI APIs'],
+      github: null,
+      demo: 'https://determinedeng.com/',
+      details: {
+        overview: 'DEtermined is a comprehensive data engineering education platform designed to help engineers master modern data infrastructure and practices. Through hands-on projects, in-depth articles, and practical guides, the platform covers everything from foundational concepts to advanced distributed systems architecture. With a focus on real-world applications, DEtermined bridges the gap between theory and practice, empowering data engineers to build production-grade systems with confidence.',
+        features: [
+          'End-to-end distributed data pipelines using PySpark, SQL, and Delta Lake',
+          'ML-enhanced content recommendation system using LangChain and OpenAI APIs',
+          '5x performance improvement through advanced tuning and optimization techniques',
+          'Interactive learning modules with hands-on projects and code examples',
+          'Production-grade system design patterns and best practices',
+          'Community-driven platform with 200+ active subscribers and 30K+ monthly impressions'
+        ],
+        newsletters: [
+          {
+            name: 'DE Projects',
+            description: 'Hands-on data engineering projects covering real-world use cases, from batch processing to real-time streaming',
+            link: 'https://deprojects.substack.com/?utm_campaign=profile_chips'
+          },
+          {
+            name: 'DE Prep',
+            description: 'Interview preparation resources, system design guides, and technical deep-dives for aspiring data engineers',
+            link: 'https://deprep.substack.com/?utm_campaign=profile_chips'
+          }
+        ]
+      }
+    },
+    {
       name: 'LinkedIn Post Generator',
+      date: 'Mar 2025',
       description:
         'A Model Context Protocol (MCP) server that automates generating professional LinkedIn post drafts from YouTube videos. Streamlines content repurposing by extracting transcripts, summarizing content, and generating engaging LinkedIn posts.',
       tech: ['MCP', 'Python', 'YouTube API', 'OpenAI', 'LLM'],
@@ -84,6 +190,7 @@ const Projects = () => {
     },
     {
       name: 'Real-Time E-Commerce Sales Analytics Pipeline',
+      date: 'Jan 2025',
       description:
         'An Apache Flink application designed for real-time sales analytics in an E-Commerce setting. Processes financial transaction data from Kafka, performs aggregations, and stores results in Postgres and Elasticsearch for further analysis.',
       tech: ['Apache Flink', 'Kafka', 'PostgreSQL', 'Elasticsearch', 'Docker', 'Python'],
@@ -111,37 +218,6 @@ const Projects = () => {
         }
       }
     },
-    {
-      name: 'DEtermined Data Engineering Platform',
-      description:
-        'Engineered end-to-end distributed data pipelines using PySpark, SQL, and Delta Lake achieving 5x performance improvement. ML-enhanced content platform with 200+ subscribers and 30K+ monthly impressions.',
-      tech: ['PySpark', 'Delta Lake', 'SQL', 'LangChain', 'OpenAI APIs'],
-      github: null,
-      demo: 'https://determinedeng.com/',
-      details: {
-        overview: 'DEtermined is a comprehensive data engineering education platform designed to help engineers master modern data infrastructure and practices. Through hands-on projects, in-depth articles, and practical guides, the platform covers everything from foundational concepts to advanced distributed systems architecture. With a focus on real-world applications, DEtermined bridges the gap between theory and practice, empowering data engineers to build production-grade systems with confidence.',
-        features: [
-          'End-to-end distributed data pipelines using PySpark, SQL, and Delta Lake',
-          'ML-enhanced content recommendation system using LangChain and OpenAI APIs',
-          '5x performance improvement through advanced tuning and optimization techniques',
-          'Interactive learning modules with hands-on projects and code examples',
-          'Production-grade system design patterns and best practices',
-          'Community-driven platform with 200+ active subscribers and 30K+ monthly impressions'
-        ],
-        newsletters: [
-          {
-            name: 'DE Projects',
-            description: 'Hands-on data engineering projects covering real-world use cases, from batch processing to real-time streaming',
-            link: 'https://deprojects.substack.com/?utm_campaign=profile_chips'
-          },
-          {
-            name: 'DE Prep',
-            description: 'Interview preparation resources, system design guides, and technical deep-dives for aspiring data engineers',
-            link: 'https://deprep.substack.com/?utm_campaign=profile_chips'
-          }
-        ]
-      }
-    },
   ];
 
   useEffect(() => {
@@ -165,18 +241,21 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="animate-on-scroll group bg-gray-800/30 border border-gray-700 rounded-lg p-6 hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 cursor-pointer flex flex-col"
+              className="animate-on-scroll group bg-gray-800/30 border border-gray-700 rounded-lg p-6 hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 cursor-pointer flex flex-col h-full"
               style={{ animationDelay: `${0.1 + index * 0.1}s` }}
               onClick={() => setSelectedProject(project)}
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-gray-100 group-hover:text-accent transition-colors">
-                  {project.name}
-                </h3>
+              <div className="flex justify-between items-start mb-4 min-h-[3.5rem]">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-100 group-hover:text-accent transition-colors leading-tight">
+                    {project.name}
+                  </h3>
+                  <p className="text-sm text-gray-400 mt-1">{project.date}</p>
+                </div>
                 <div className="flex gap-3 flex-shrink-0">
                   {project.github && (
                     <a
@@ -195,15 +274,11 @@ const Projects = () => {
                       href={project.smithery}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:opacity-70 transition-opacity"
+                      className="text-gray-400 hover:text-accent transition-colors"
                       aria-label="Smithery"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <img
-                        src="https://smithery.ai/logo.svg"
-                        alt="Smithery"
-                        className="w-5 h-5"
-                      />
+                      <ExternalLink size={20} />
                     </a>
                   )}
                   {project.demo && (
@@ -260,9 +335,12 @@ const Projects = () => {
           {/* Modal Header */}
           <div className="sticky top-0 bg-gray-900/95 backdrop-blur-sm p-6 flex justify-between items-start">
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-gray-100 mb-2">
-                {selectedProject.name}
-              </h3>
+              <div className="flex items-center gap-3 mb-2">
+                <h3 className="text-3xl font-bold text-gray-100">
+                  {selectedProject.name}
+                </h3>
+                <span className="text-sm text-gray-400 mt-2">• {selectedProject.date}</span>
+              </div>
               <p className="text-gray-300 leading-relaxed">
                 {selectedProject.description}
               </p>
@@ -308,7 +386,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-accent border border-gray-700 rounded transition-colors"
                 >
-                  <img src="https://smithery.ai/logo.svg" alt="Smithery" className="w-4 h-4" />
+                  <ExternalLink size={18} />
                   <span>Smithery</span>
                 </a>
               )}
@@ -444,7 +522,7 @@ const Projects = () => {
 
             {/* Workflow */}
             {selectedProject.details?.workflow && (
-              <div>
+              <div className="mb-8">
                 <h4 className="text-2xl font-semibold text-accent mb-4">Workflow Example</h4>
                 <ol className="space-y-2">
                   {selectedProject.details.workflow.map((step, idx) => (
@@ -454,6 +532,18 @@ const Projects = () => {
                     </li>
                   ))}
                 </ol>
+              </div>
+            )}
+
+            {/* Example */}
+            {selectedProject.details?.example && (
+              <div>
+                <h4 className="text-2xl font-semibold text-accent mb-4">Example Usage</h4>
+                <pre className="bg-gray-950 border border-gray-700 rounded-lg p-4 overflow-x-auto">
+                  <code className="text-sm text-gray-300 font-mono whitespace-pre">
+                    {selectedProject.details.example}
+                  </code>
+                </pre>
               </div>
             )}
           </div>
