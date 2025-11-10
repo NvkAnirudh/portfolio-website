@@ -214,7 +214,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="animate-on-scroll mt-20 pt-8 border-t border-gray-800 text-center" style={{ animationDelay: '0.3s' }}>
           <p className="text-gray-500 text-sm">
-            Built with React & Tailwind CSS • © {new Date().getFullYear()} [Your Name]
+            Built with React & Tailwind CSS • © {new Date().getFullYear()} Anirudh Nuti
           </p>
         </div>
       </div>
