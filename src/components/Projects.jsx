@@ -28,6 +28,33 @@ const Projects = () => {
 
   const projects = [
     {
+      name: 'Claims Guardian AI',
+      date: 'Nov 2025',
+      description:
+        'An intelligent multi-agent system for automated medical claims validation using AI to detect billing errors, fraud, and compliance violations in US healthcare claims.',
+      tech: ['LangGraph', 'FastAPI', 'Anthropic Claude AI', 'Next.js', 'PostgreSQL'],
+      github: 'https://github.com/NvkAnirudh/claims-guardian-ai',
+      demo: null,
+      details: {
+        overview: 'Claims Guardian AI is a production-ready prototype that revolutionizes medical insurance claims validation through a sophisticated multi-agent architecture. Built with LangGraph and Anthropic Claude, the system orchestrates five specialized AI agents that run in parallel to analyze diagnosis codes, procedure codes, patient demographics, and charges—identifying potential issues before claims are submitted to insurers.',
+        features: [
+          '80% cost reduction through intelligent prompt caching strategies',
+          '5x faster validation with parallel agent execution vs sequential processing',
+          'Five specialized AI agents for comprehensive validation coverage',
+          'CPT-ICD code compatibility validation ensuring proper diagnosis-procedure alignment',
+          'NCCI bundling rules verification preventing inappropriate code combinations',
+          'Modifier usage validation for proper claim submission',
+          'Patient demographic restrictions checking age and gender appropriateness',
+          'Cost anomaly detection identifying unusual charges',
+          'Contextual explanations powered by Claude 3.5 Sonnet for each validation finding',
+          'Conversational interface for follow-up questions and clarifications',
+          'Risk scoring and financial impact calculations for each identified issue',
+          'Transparent agent attribution showing which agent identified each issue',
+          'Suggested fixes and remediation guidance for validation failures'
+        ]
+      }
+    },
+    {
       name: 'YC Extractor and Job Application Tracker',
       date: 'Nov 2025',
       description:
