@@ -19,6 +19,7 @@ const Navbar = ({ isInPortfolio }) => {
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Research', href: '#research' },
+    { name: 'Artifacts', href: '#artifacts' },
     { name: 'Contact', href: '#contact' },
   ];
 
