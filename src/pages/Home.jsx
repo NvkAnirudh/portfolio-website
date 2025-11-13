@@ -6,6 +6,7 @@ import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Research from '../components/Research';
+import Artifacts from '../components/Artifacts';
 import Contact from '../components/Contact';
 import Snowflakes from '../components/Snowflakes';
 import HalloweenElements from '../components/HalloweenElements';
@@ -55,6 +56,7 @@ const Home = () => {
           <Projects />
           <Skills />
           <Research />
+          <Artifacts />
           <Contact />
         </div>
       </div>
