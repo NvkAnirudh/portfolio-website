@@ -35,6 +35,11 @@ const ArtifactPage = () => {
   const categoryArtifacts = {
     'understanding-llms': [
       {
+        id: 'how-llms-work',
+        title: 'How do LLMs Really Work?',
+        date: 'Nov 13, 2025',
+      },
+      {
         id: 'temperature-in-llm',
         title: 'What is temperature in LLM?',
         date: 'Nov 13, 2025',
