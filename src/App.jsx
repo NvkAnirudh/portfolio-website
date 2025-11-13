@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ResearchArticle from './pages/ResearchArticle';
 import ArtifactPage from './pages/ArtifactPage';
+import ArtifactArticle from './pages/ArtifactArticle';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/research/:paperId" element={<ResearchArticle />} />
           <Route path="/artifacts/:categoryId" element={<ArtifactPage />} />
+          <Route path="/artifacts/:categoryId/:artifactId" element={<ArtifactArticle />} />
         </Routes>
       </Router>
       <Analytics />

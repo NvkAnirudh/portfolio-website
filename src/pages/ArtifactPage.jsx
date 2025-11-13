@@ -46,6 +46,10 @@ const ArtifactPage = () => {
   const title = categoryTitles[categoryId] || 'Artifacts';
   const artifacts = categoryArtifacts[categoryId] || [];
 
+  const handleArtifactClick = (artifactId) => {
+    navigate(`/artifacts/${categoryId}/${artifactId}`);
+  };
+
   return (
     <div className="min-h-screen bg-gray-950 text-gray-200" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -71,6 +75,7 @@ const ArtifactPage = () => {
             {artifacts.map((artifact, index) => (
               <div
                 key={artifact.id}
+                onClick={() => handleArtifactClick(artifact.id)}
                 className="animate-on-scroll group bg-gray-800/30 border border-gray-700 rounded-lg p-6 hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 cursor-pointer"
                 style={{ animationDelay: `${0.1 + index * 0.1}s` }}
               >
